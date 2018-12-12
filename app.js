@@ -7,11 +7,6 @@ var proxy = require('http-proxy-middleware')
 
 var app = express();
 
-app.use(proxy('/api', {
-  target: 'http://127.0.0.1:1337',
-  pathRewrite: { '^/api': '' }
-}));
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
